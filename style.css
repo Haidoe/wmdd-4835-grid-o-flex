@@ -1,6 +1,6 @@
 @font-face {
   font-family: "League Gothic";
-  src: url("LeagueGothic-Regular.woff.woff") format("woff");
+  src: url("LeagueGothic-Regular.woff") format("woff");
 }
 * {
   box-sizing: border-box;
@@ -109,9 +109,15 @@ h3 {
 }
 
 .teams .member-name {
-  text-align: center;
   text-transform: uppercase;
   font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  /* Uncomment this for testing */
+  /* background-color: red; */
+  height: 20px;
 }
 
 .teams img {
@@ -228,15 +234,18 @@ footer a {
 
   .teams .member::after {
     content: "";
+    height: 20px;
+    /* Uncomment this for testing */
+    /* background-color: red; */
   }
 
   .teams .member:nth-of-type(2n)::after {
     order: 0;
-    height: 1rem;
   }
 
   .teams .member:nth-of-type(2n) .member-name {
     order: 2;
+    align-items: start;
   }
 
   .teams .member:nth-of-type(2n) img {
